@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルーン占いカード表示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ルーン占いカード</h1>
+        <label for="cardNumber">カード番号を入力（1〜25）：</label>
+        <input type="number" id="cardNumber" min="1" max="25">
+        <button onclick="displayCard()">表示</button>
+
+        <div class="card-display">
+            <img id="cardImage" src="" alt="カード画像">
+            <div id="cardText"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
