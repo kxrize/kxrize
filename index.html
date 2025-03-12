@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ルーン占いカード表示</title>
+    <title>Ｋ＊ＲＩＺＥのルーン占い</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>ルーン占いカード</h1>
-        <label for="cardNumber">カード番号を入力（1〜25）：</label>
-        <input type="number" id="cardNumber" min="1" max="25">
-        <button onclick="displayCard()">表示</button>
+        <div class="content">
+            <!-- カード画像（左側に大きく配置） -->
+            <div class="card-display">
+                <img id="cardImage" src="" alt="カード画像">
+            </div>
 
-        <div class="card-display">
-            <img id="cardImage" src="" alt="カード画像">
-            <div id="cardText"></div>
+            <!-- 右側の情報（タイトル・入力欄・ボタン・説明） -->
+            <div class="info">
+                <h1>Ｋ＊ＲＩＺＥルーン占い</h1>
+                <div class="input-group">
+                    <label for="cardNumber">No.1から25：</label>
+                    <input type="number" id="cardNumber" min="1" max="25">
+                    <button onclick="displayCard()">表示</button>
+                </div>
+                <div id="cardText"></div>
+            </div>
         </div>
     </div>
 
+    <script>
+        // ページ読み込み時に入力欄にカーソルを自動配置
+        window.onload = function() {
+            document.getElementById("cardNumber").focus();
+        };
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
