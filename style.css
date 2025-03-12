@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
     margin: 0;
@@ -8,7 +8,7 @@ body {
 
 .container {
     width: 80%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -16,24 +16,73 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-display {
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    gap: 30px; /* 要素間のスペース */
+}
+
+.card-display {
+    width: 60%; /* カードを大きく表示 */
 }
 
 .card-display img {
-    width: 150px;
+    width: 100%; /* 画像を親要素にフィットさせる */
+    max-width: 400px; /* 最大サイズを制限 */
     height: auto;
-    margin-right: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#cardText {
+.info {
+    width: 40%; /* 右側の要素の幅を設定 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-    width: 50%;
-    font-size: 16px;
-    line-height: 1.5;
+}
+
+.info h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 入力欄とボタンの間隔 */
+}
+
+.input-group input {
+    padding: 5px;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.0em;
+}
+
+.input-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 20%;
+    font-size: 1.0em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-group button:hover {
+    background-color: #45a049;
+}
+
+#cardText {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
